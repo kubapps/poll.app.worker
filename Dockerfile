@@ -3,7 +3,8 @@
 # (errors common in arm/v7 32bit) https://github.com/dotnet/dotnet-docker/issues/1537
 # https://hub.docker.com/_/microsoft-dotnet
 # hadolint ignore=DL3029
-FROM --platform=${BUILDPLATFORM} mcr.microsoft.com/dotnet/sdk:5.0 as build
+# FROM --platform=${BUILDPLATFORM} mcr.microsoft.com/dotnet/sdk:5.0 as build
+FROM  mcr.microsoft.com/dotnet/sdk:5.0 as build
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM"
